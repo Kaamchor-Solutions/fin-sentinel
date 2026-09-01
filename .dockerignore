@@ -1,0 +1,12 @@
+tests/
+.github/
+.git/
+.venv/
+venv/
+artifacts/
+data/
+__pycache__/
+*.pyc
+.pytest_cache/
+Dockerfile
+.dockerignore

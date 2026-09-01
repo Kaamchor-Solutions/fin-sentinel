@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Test / tooling caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# Generated artifacts (reproduce with `python -m fin_sentinel.train`)
+artifacts/
+data/
+*.joblib
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.env
+.idea/
+.vscode/
