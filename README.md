@@ -52,17 +52,17 @@ Most predictive features (permutation importance): `amount_vs_user_mean`, `hour_
 
 ```mermaid
 flowchart LR
-    A["🧪 Synthetic generator\n3 fraud patterns"] --> B["🔧 Feature engineering\nvelocity · recency · baselines"]
+    A["🧪 Synthetic generator<br/>3 fraud patterns"] --> B["🔧 Feature engineering<br/>velocity · recency · baselines"]
     B --> C{"⚖️ Train & compare"}
     C --> D["Logistic Regression"]
     C --> E["Random Forest"]
-    C --> F["Isolation Forest\n(unsupervised)"]
-    D & E & F --> G["🥇 Best by PR-AUC\n+ F1 threshold"]
-    G --> H[("📦 artifacts/\nmodel.joblib · metrics.json")]
-    H --> I["🚀 FastAPI\n/score · /health · /metadata"]
+    C --> F["Isolation Forest<br/>(unsupervised)"]
+    D & E & F --> G["🥇 Best by PR-AUC<br/>+ F1 threshold"]
+    G --> H[("📦 artifacts/<br/>model.joblib · metrics.json")]
+    H --> I["🚀 FastAPI<br/>/score · /health · /metadata"]
     I --> J{"🎯 Decision"}
     J -->|"low"| K["Approve"]
-    J -->|"medium"| L["Step-up auth\n(OTP / 3-D Secure)"]
+    J -->|"medium"| L["Step-up auth<br/>(OTP / 3-D Secure)"]
     J -->|"high"| M["Block + review"]
 ```
 
